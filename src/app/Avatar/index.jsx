@@ -3,7 +3,7 @@
         return (
         <ul>
             <li>
-                <Image src= {imageSrc}/>
+                <Image src= {imageSrc} width ={32} height={32}/>
             </li>
             <li>
                 @{name}

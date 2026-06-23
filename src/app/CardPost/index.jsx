@@ -5,7 +5,7 @@ return (
 <article>
 <header>
     <figure>
-        <Image src={post.cover} />
+        <Image src={post.cover} width={438} height={133} />
     </figure>
 </header>
 <section>
@@ -13,7 +13,10 @@ return (
     <p>{post.body}</p>
 </section>
 <footer>
-    <Avatar name={post.author.name} imageSrc={post.author.avatar} />
+    <Avatar 
+    imageSrc={post.author.avatar}
+    name={post.author.username} 
+    />
 </footer>
 </article>
 );
