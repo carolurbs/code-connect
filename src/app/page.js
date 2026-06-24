@@ -1,4 +1,4 @@
-
+import {CardPost}  from "./components/CardPost";
   const post ={
     
             "id": 1,
