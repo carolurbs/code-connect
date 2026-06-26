@@ -1,9 +1,9 @@
-
+import styles from './avatar.module.css'
 import Image from "next/image";
 
 export const Avatar = ({ name, imageSrc }) => {
     return (
-        <ul>
+        <ul className={styles.avatar}>
             <li>
                 <Image src={imageSrc} width={32} height={32} alt={name} />
             </li>
