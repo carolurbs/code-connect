@@ -1,7 +1,13 @@
 .card {
-    width: 486px;
+    width: 100%;
+    max-width: 460px;
+    min-height: 340px;
     border-radius: 8px;
     background: #171D1F;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .header {
@@ -14,12 +20,21 @@
     margin: 0;
 }
 
+.header figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
 .body {
     color: #BCBCBC;
     padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    flex: 1;
 }
 
 .body h2 {
@@ -36,9 +51,12 @@
     font-weight: 400;
     line-height: 150%;
     margin: 0;
-    flex-grow: 1;
 }
 
 .footer {
     padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: auto;
 }
