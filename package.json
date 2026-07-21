@@ -16,5 +16,8 @@
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }
