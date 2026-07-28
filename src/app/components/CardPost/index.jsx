@@ -23,8 +23,8 @@ return (
         </section>
         <footer className={styles.footer}>
             <Avatar 
-            imageSrc={post.author.avatar}
-            name={post.author.username} 
+            imageSrc={post.author?.avatar}
+            name={post.author?.username ?? 'Autor'} 
             />
         </footer>
         </article>

@@ -30,7 +30,7 @@ async function getAllPosts(page){
       take:perPage,
       skip,
       orderBy: { createdAt: 'desc' },
-      include: {
+        include: {
         author: true
       }
     })
@@ -45,15 +45,22 @@ async function getAllPosts(page){
 export default async function Home({searchParams}) {
   const currentPage = parseInt(searchParams?.page) || 1;
   const {data:posts, prev,next} = await getAllPosts(currentPage);
+
+  if (!posts || posts.length === 0) {
+    throw new Error('Nenhum post encontrado');
+  }
+
   return (
-    <main className={styles.grid}>
-    {posts.map((post) => (
-      <CardPost key={post.id} post={post} />
-    ))}
-    <div className={styles.links}>
-    {prev && <Link href={`/?page=${prev}`}>Anterior</Link>}
-    {next && <Link href={`/?page=${next}`}>Próximo</Link>}
-    </div>
+    <main className={styles.container}>
+      <div className={styles.grid}>
+        {posts.map((post) => (
+          <CardPost key={post.id} post={post} />
+        ))}
+      </div>
+      <div className={styles.links}>
+        {prev && <Link href={`/?page=${prev}`}>Anterior</Link>}
+        {next && <Link href={`/?page=${next}`}>Próximo</Link>}
+      </div>
     </main>
   );
 }

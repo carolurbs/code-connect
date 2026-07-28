@@ -1,3 +1,9 @@
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -10,5 +16,6 @@
     display: flex;
     justify-content: center;
     gap: 16px;
-    color:
+    color: #81FE88;
+    margin-top: 16px;
 }
